@@ -10,16 +10,32 @@
 
  <body>
 
-    <h1>I'm so tired, I need help</h1>
+<h1>I'm so tired, I need help</h1>
 
-    <input placeholder="how much" id="sugar">
-    <label for="sugar">Sugar?</label>
-    <input placeholder="what kind of" id="cream">
-    <label for="cream">Cream?</label>
-    <button>Place Order</button>
+<select name="sugar-options" id="sugar">
+    <option value="">How much sugar would you like?</option>
+    <option value="no">none</option>
+    <option value="1">1 cube</option>
+    <option value="2">2 cubes</option>
+    <option value="3">3 cubes</option>
+    <option value="4">4 cubes</option>
+    <option value="5">just hit me</option>
+</select>
+<label for="sugar">Sugar</label>
 
-    <p></p>
-    
+<select name="cream-options" id="cream">
+    <option value="">How much cream would you like?</option>
+    <option value="no">none</option>
+    <option value="heavy">heavy</option>
+    <option value="light">light</option>
+    <option value="half-and-half">half-and-half</option>
+</select>
+<label for="cream">Cream</label>
+
+<button>Place Order</button>
+
+<p></p>
+
  </body>
 
 </html>
