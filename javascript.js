@@ -3,6 +3,7 @@ function clickButton() {
         summary.textContent = "What are you after?";
     } else {
         makingCoffee();
+        showCoffee();
     }
 }
 
@@ -44,6 +45,10 @@ function finishedCoffee() {
         finishedOrder.textContent = blackCoffee;
         }
     }
+}
+
+function showCoffee() {
+    document.getElementById("coffeecup").style.display = "block";
 }
 
 function getSugar() {
