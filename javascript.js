@@ -10,14 +10,13 @@ function makingCoffee() {
     let choice1 = getSugar();
     let choice2 = getCream();
     let order = `${choice1} sugar, ${choice2} cream`;
-    summary.textContent = order;
     
     if ( choice1 === "2" || choice1 === "3" || choice1 === "4" ) {
-        let pluralOrder = order.replace("sugar", "sugars");
-        summary.textContent = pluralOrder;
+        let moreSugar = order.replace("sugar", "sugars");
+        summary.textContent = moreSugar;
     } else if (choice1 === "5") {
-        let sugarOrder = `only sugar, no coffee, ${choice2} cream`;
-        summary.textContent = sugarOrder;
+        let allSugar = `as much sugar as possible, ${choice2} cream`;
+        summary.textContent = allSugar;
     } else {
         summary.textContent = order;
     }
@@ -37,8 +36,13 @@ function finishedCoffee() {
             finishedOrder.textContent = whiteCoffee;
         }
     } else {
+        if (choice1 === "5") {
+            let sugarCoffee = `Here's your black coffee. The viscosity has gone up quite a bit...`;
+            finishedOrder.textContent = sugarCoffee;
+        } else {
         let blackCoffee = `Here you are, your black coffee!`;
         finishedOrder.textContent = blackCoffee;
+        }
     }
 }
 
