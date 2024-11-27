@@ -4,9 +4,12 @@ function makingCoffee() {
     let order = `${choice1} sugar, ${choice2} cream`;
     summary.textContent = order;
     
-    if (choice1 === "2") {
+    if ( (choice1 === "2") || (choice1 === "3") || (choice1 === "4") ) {
         let pluralOrder = order.replace("sugar", "sugars");
         summary.textContent = pluralOrder;
+    } else if (choice1 === "5") {
+        let sugarOrder = `only sugar, no coffee, ${choice2} cream`;
+        summary.textContent = sugarOrder;
     } else {
         summary.textContent = order;
     }
