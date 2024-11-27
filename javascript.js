@@ -32,6 +32,7 @@ function getCream() {
 }
 
 let selection = document.querySelectorAll("select");
-let summary = document.querySelector("p");
+let summary = document.querySelector("#summary");
+let finishedOrder = document.querySelector("#finished-order");
 let button = document.querySelector("button");
 button.addEventListener("click", clickButton); 
