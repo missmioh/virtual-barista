@@ -21,6 +21,25 @@ function makingCoffee() {
     } else {
         summary.textContent = order;
     }
+    finishedCoffee();
+}
+
+function finishedCoffee() {
+    let choice1 = getSugar();
+    let choice2 = getCream();
+
+    if ( choice2 === "light" || choice2 === "heavy" || choice2 === "half-and-half" ) {
+        if (choice1 === "5") {
+            let noCoffee = `It must be bad if you don't even like coffee...`;
+            finishedOrder.textContent = noCoffee;
+        } else {
+            let whiteCoffee = `Here you are, your white coffee!`;
+            finishedOrder.textContent = whiteCoffee;
+        }
+    } else {
+        let blackCoffee = `Here you are, your black coffee!`;
+        finishedOrder.textContent = blackCoffee;
+    }
 }
 
 function getSugar() {
@@ -35,4 +54,4 @@ let selection = document.querySelectorAll("select");
 let summary = document.querySelector("#summary");
 let finishedOrder = document.querySelector("#finished-order");
 let button = document.querySelector("button");
-button.addEventListener("click", clickButton); 
+button.addEventListener("click", clickButton);
