@@ -1,24 +1,26 @@
-
-function makingCoffee(sugar, cream) {
-    let order = `${getSugar()} sugar, ${getCream()} cream`;
+function makingCoffee() {
+    let choice1 = getSugar();
+    let choice2 = getCream();
+    let order = `${choice1} sugar, ${choice2} cream`;
     summary.textContent = order;
-    if (getSugar() > 1) {
+    
+    if (choice1 === "2") {
         let pluralOrder = order.replace("sugar", "sugars");
-        return pluralOrder;
+        summary.textContent = pluralOrder;
     } else {
-        return order;
+        summary.textContent = order;
     }
 }
 
 function getSugar() {
-    return input[0].value;
+    return selection[0].value;
 }
 
 function getCream() {
-    return input[1].value;
+    return selection[1].value;
 }
 
-let input = document.querySelectorAll('select');
+let selection = document.querySelectorAll('select');
 let summary = document.querySelector('p');
 let button = document.querySelector('button');
 button.addEventListener('click', makingCoffee); 
