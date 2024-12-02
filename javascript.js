@@ -1,13 +1,21 @@
 function clickButton() {
-    if ( getSugar() === "" || getCream() === "" ) {
+    if ( areEmpty() ) {
         summary.textContent = "What are you after?";
     } else {
-        makingCoffee();
+        chooseCoffee();
         showCoffee();
     }
 }
 
-function makingCoffee() {
+function areEmpty() {
+    if ( getSugar() === "" || getCream() === "" ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function chooseCoffee() {
     let choice1 = getSugar();
     let choice2 = getCream();
     let order = `${choice1} sugar, ${choice2} cream`;
@@ -21,10 +29,10 @@ function makingCoffee() {
     } else {
         summary.textContent = order;
     }
-    finishedCoffee();
+    serveCoffee();
 }
 
-function finishedCoffee() {
+function serveCoffee() {
     let choice1 = getSugar();
     let choice2 = getCream();
 
