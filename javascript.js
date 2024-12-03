@@ -1,6 +1,7 @@
 function clickButton() {
     if ( areEmpty() ) {
         summary.textContent = "What are you after?";
+        removeSelection();
     } else {
         chooseCoffee();
         showCoffee();
@@ -12,6 +13,13 @@ function areEmpty() {
         return true;
     } else {
         return false;
+    }
+}
+
+function removeSelection() {
+    if ( areEmpty() ) {
+        finishedOrder.textContent = null;
+        document.getElementById("coffeecup").style.display = "none";
     }
 }
 
